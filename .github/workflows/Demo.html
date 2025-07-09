@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Volare Demo</title>
+  
+  <link rel="stylesheet" href="../CSS/navbar.css">
+  <link rel="stylesheet" href="../CSS/PreviewBox.css">
+  <link rel="stylesheet" href="../CSS/Toast.css">
+  <link rel="stylesheet" href="../CSS/PopUp.css">
+  <link rel="stylesheet" href="../CSS/Model.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"/>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-links left-links">
+        <ul>
+          <li><a href="#quick-tour">Examples</a></li>
+          <li><a href="#showreel">Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="logo">
+        <a href="#"><img src="Model/Volare.png" alt="Volare Logo"></a>
+      </div>
+
+      <div class="nav-links right-links">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="close-btn" id="menu-close">
+        <span class="icon fas fa-times"></span>
+      </div>
+      <ul>
+        <li><a href="#quick-tour">Examples</a></li>
+        <li><a href="#showreel">Documentation</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <div class="toast-overlay" id="toast-overlay"></div>
+    <div id="top-toast" class="top-toast top-toast-hidden">
+      <div class="top-toast-content">
+        <strong id="top-toast-title">Title</strong>
+        <span id="top-toast-message">Message goes here...</span>
+      </div>
+    </div>
+
+    <div class="wrapper-gallery">
+      <h1 class="name-artwork">Simple Models</h1>
+      <div class="gallery" id="gallery">
+        <div class="image thumbnail" alt="Helicopter Model" data-model="../Model/Helicopter/Helicopter4.gltf">
+          <span><img src="Models/Background/heaven/back.jpg" alt="Helicopter Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+        
+        <div class="image thumbnail" alt="Elephant Model" data-model="../Models/Elephant.glb">
+          <span><img src="Models/Background/heaven/front.jpg" alt="Elephant Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+        
+        <div class="image thumbnail" alt="Duck Model" data-model="../Model/Duck.gltf">
+          <span><img src="Model/Duck/screenshot/screenshot.png" alt="Duck Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+        
+        <div class="image thumbnail" alt="Avocado Model" data-model="../Model/Avocado/glTF/Avocado.gltf">
+          <span><img src="Model/Avocado/screenshot/screenshot.jpg" alt="Avocado Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+        
+        <div class="image thumbnail" alt="MultiUV Test Model" data-model="../Model/MultiUVTest/glTF/MultiUVTest.gltf">
+          <span><img src="Model/MultiUVTest/screenshot/screenshot.jpg" alt="MultiUV Test Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+        
+        <div class="image thumbnail" alt="Brain Stem Model" data-model="../Model/BrainStem/glTF/BrainStem.gltf">
+          <span><img src="Model/BrainStem/screenshot/screenshot.gif" alt="Brain Stem Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+        
+        <div class="image thumbnail" alt="Audi R8 Model" data-model="../Model/AudiR8.glb">
+          <span><img src="Model/BrainStem/screenshot/screenshot.gif" alt="Audi R8 Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+        
+        <div class="image thumbnail" alt="Custom Mesh Model" data-model="../Model/Demo_1749996801160.vmesh">
+          <span><img src="Model/BrainStem/screenshot/screenshot.gif" alt="Custom Mesh Preview"></span>
+          <div class="overlay">
+            <i class="type fa-solid fa-play">
+              <i class="typetwo"></i>
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </i>
+          </div>
+        </div>  
+      </div>
+    </div>
+
+    <div class="preview-box">
+      <div class="image-box">
+        <div id="ModelContainer" class="ModelContainer">
+          <div id="model" class="Model" style="background-color: transparent;">
+            <div id="ModelAttrData"></div>
+              <div class="Model-Notice">
+              <form id="model-access-form" class="notice-card">
+                <div class="VolareParent">
+                  <img class="VolareWatermark" src="../../Model/Volare.png" alt="Volare Watermark">
+                </div>
+                
+                <div class="ModelWarning">
+                  <h3 class="ModelWarningTitle">
+                    <i class="fa-solid fa-bolt fa-bounce" style="--fa-animation-iteration-count:1"></i>
+                    Performance Notice
+                  </h3>
+                  <p class="ModelWarningParagraph">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Heavy GPU Usage: Complex models may reduce device performance<br />
+                    <i class="fa-solid fa-ban"></i> Avoid on: Phones, Integrated graphics laptops<br />
+                    <i class="fa-solid fa-circle-check"></i> Recommended: Chrome/Firefox with hardware acceleration enabled
+                  </p>
+                </div>
+
+                <div class="ModelWarning">
+                  <h3 class="ModelWarningTitle">
+                    <i class="fa-solid fa-file-shield fa-fade" style="--fa-animation-iteration-count:1"></i>
+                    Security Protocol
+                  </h3>
+                  <p class="ModelWarningParagraph">
+                    <i class="fa-solid fa-eye-slash"></i> Protected View Features:
+                    <p class="ModelWarningParagraphInfo">
+                      - Auto-wireframe after 2min inactivity<br />
+                      - Texture watermarking<br />
+                      - Disabled right-click saving<br />
+                      - Session-limited access
+                    </p>
+                  </p>
+                </div>
+
+                <p class="more-info">
+                  To Learn More, Click on this Button <i class="fa-solid fa-book fa-beat" style="--fa-animation-iteration-count:1"></i>
+                  to open the guide section
+                </p>
+
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABCLDRmmPikSRvmG"></div>
+
+                <button type="submit" id="ViewModel" class="submit-btn">Submit</button>
+              </form>
+            </div>
+            
+            <div class="ModelAttrMain">
+              <div class="ModelAttrBackTab">
+                <div class="ModelAttrContainer">
+                  <span class="ModelAttrBack ResetToggle" id="ResetToggle">
+                    <i class="fa-solid fa-arrow-rotate-right ModelAttr Lighting"></i>
+                    <h4 class="ModelAttrText">Reset All Settings</h4>
+                  </span>
+                  <span class="ModelAttrBack GuideToggle" id="GuideToggle">
+                    <i class="fa-solid fa-book ModelAttr"></i>
+                    <h4 class="ModelAttrText">Guide Instructions</h4>
+                  </span>
+                  <span class="ModelAttrBack ToolkitToggle">
+                    <i class="fa-solid fa-cube ModelAttr"></i>
+                    <h4 class="ModelAttrText">Visual Toolkit</h4>
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="VertexFocusMain">
+              <div class="VertexFocusBackTab">
+                <div class="VertexFocusContainer">
+                  <span class="VertexFocusBack SelectVertex" id="SelectVertex">
+                    <i class="fa-solid fa-crosshairs VertexFocus"></i>
+                    <h4 class="VertexFocusText">Select Vertex</h4>
+                  </span>
+                  <span class="VertexFocusBack RotateAround" id="RotateAround">
+                    <i class="fa-solid fa-hand VertexFocus"></i>
+                    <h4 class="VertexFocusText">Hand Tool</h4>
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="VisualToolkit" id="VisualToolkit">
+              <div class="DetailsToolkiticon">
+                <span class="CloseToolkitIcon fas fa-times"></span>
+              </div>
+              
+              <div class="ModesThree">
+                <div class="ModesWireframe">
+                  <div class="Wireframe OpWireframe" id="Wireframe">
+                    <i class='bx bx-globe'></i>
+                    <H4>Wireframe</H4>
+                  </div>
+                  <div class="Original OpWireframe active" id="OriginalWire">
+                    <i class='bx bxs-circle'></i>
+                    <h4>Original</h4>
+                  </div>
+                  <div class="AO OpWireframe" id="AOWire">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                    <h4>Ambient Occlusion</h4>
+                  </div>
+                </div>
+                
+                <div class="OpModesContainer">
+                  <div class="Center-Camera OpModes" id="Center-Camera">
+                    <i class="fa-solid fa-camera-rotate"></i>
+                    <h4>Reset Camera</h4>
+                  </div>
+                  <div class="Advanced_Op OpModes" id="Advanced_Op">
+                    <i class="bx bxs-chevron-down"></i>
+                    <h4>Advanced Options</h4>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="AdvancedThree" id="AdvancedThree">
+                <div class="AnalysisAnimTab">
+                  <div class="AdvancedBtn tab-button active" data-target="analysis-results">
+                    <i class="fas fa-calculator"></i>
+                    <h4>Model Statistics</h4>
+                  </div>
+                  <div class="AdvancedBtn tab-button animation-btn" data-target="animation-tab" id="animation-btn">
+                    <i class="fa-solid fa-play"></i>
+                    <h4>Animations Tab</h4>
+                  </div>
+                  <div class="AdvancedBtn tab-button" data-target="feature-panel">
+                    <i class="fas fa-gem"></i>
+                    <h4>Features Tab</h4>
+                  </div>
+                </div>
+                
+                <div id="ui-panel">
+                  <div class="AdvancedLeft">
+                    <div class="ModelOptionsInfo tab-content active" id="analysis-results">
+                      Undefined
+                    </div>
+                    <div id="animation-tab" class="tab-content">
+                      <div class="ModelOptionsInfo" id="animation-panel">
+                        Undefined
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="AdvancedRight tab-content" id="feature-panel">
+                    <div class="AdvancedRightGrid">
+                      <div class="AdvancedBtn" id="toggle-bounding-volumes">
+                        <i class="fa-solid fa-vector-square"></i>
+                        <h4>Bounding Box</h4>
+                      </div>
+                      <div class="AdvancedBtn" id="toggle-normals">
+                        <i class="fa-solid fa-atom"></i>
+                        <h4>Show Normals</h4>
+                      </div>
+                      <div class="AdvancedBtn" id="toggle-uv-preview">
+                        <i class="fa-solid fa-chess-board"></i>
+                        <h4>UV Layout</h4>
+                      </div>
+                    </div>
+                    <div class="AdvancedRightGrid">
+                      <div class="AdvancedBtn" id="toggle-cross-section">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <h4>Cross Section</h4>
+                      </div>
+                      <div class="AdvancedBtn" id="toggle-vertex-selection">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <h4>Vertex Focus</h4>
+                      </div>
+                      <div class="AdvancedBtn" id="toggle-performance">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <h4>Performance Monitor</h4>
+                      </div>
+                    </div>
+                    <div class="AdvancedRightGrid">
+                      <div class="AdvancedBtn" id="toggle-director-mode">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <h4>Director Mode</h4>
+                      </div>
+                      <div class="AdvancedBtn" id="toggle-turntable-plus">
+                        <i class="fa-solid fa-group-arrows-rotate"></i>
+                        <h4>Turntable</h4>
+                      </div>
+                      <div class="AdvancedBtn" id="toggle-GammaCorrectPipeline">
+                        <i class="fa-solid fa-wave-square"></i>
+                        <h4>Gamma Color Correction</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="input-wrapper">
+                  <h5>Mesh Rotation</h5>
+                  <input type="range" id="meshRotationSlider" name="min_val" class="range-slide" 
+                         min="0" max="360" value="0" oninput="slidecalculate()">
+                  <div class="tooltip"></div>
+                </div>
+              </div>
+              
+              <div class="HDRIContainer">
+                <div class="HDRITitle">
+                  <div class="HDRISwitchContainer">
+                    <div class="HDRIInfoParent">
+                      <p class="HDRIInfo">Turn HDRI On and Off</p>
+                    </div>
+                    <label class="HDRISwitch">
+                      <input type="checkbox" id="HDRIOff" class="HDRIOff" checked>
+                      <span class="HDRIslider"></span>
+                    </label>
+                  </div>
+                  
+                  <h2>HDRI Options</h2>
+                  
+                  <div class="AdvancedPresetParentContainer">
+                    <div class="AdvancedPresetChildContainer">
+                      <div class="AdvancedPresetInfo">
+                        <p class="AdvancedPresetInfoP">Lighting Presets</p>
+                      </div>
+                      <select class="AdvancedPreset" id="lighting-presets">
+                        <option value="outdoor">Outdoor</option>
+                        <option value="studio">Studio</option>
+                        <option value="dramatic">Dramatic</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="swiper-container">
+                  <div class="swiper-wrapper hdri-selector">
+                    <div class="swiper-slide hdri-option active" data-hdri="../Model/HDR/lonely_road_afternoon_puresky_4k.hdr">
+                      <img src="../Model/HDR/images/lonely_road_afternoon_puresky.jpeg" alt="Lonely Road Afternoon">
+                      <p>Lonely Road Afternoon</p>
+                    </div>
+                    <div class="swiper-slide hdri-option" data-hdri="../Model/HDR/little_paris_eiffel_tower_4k.hdr">
+                      <img src="../Model/HDR/images/little_paris_eiffel_tower.jpeg" alt="Little Paris Eiffel Tower">
+                      <p>Little Paris Eiffel Tower</p>
+                    </div>
+                    <div class="swiper-slide hdri-option" data-hdri="../Model/HDR/photo_studio_01_4k.hdr">
+                      <img src="../Model/HDR/images/photo_studio_01.jpeg" alt="Photo Studio 01">
+                      <p>Photo Studio 01</p>
+                    </div>
+                    <div class="swiper-slide hdri-option" data-hdri="../Model/HDR/venice_sunset_4k.hdr">
+                      <img src="../Model/HDR/images/venice_sunset.jpeg" alt="Venice Sunset">
+                      <p>Venice Sunset</p>
+                    </div>
+                    <div class="swiper-slide hdri-option" data-hdri="../Model/HDR/studio_small_03_4k.hdr">
+                      <img src="../Model/HDR/images/studio_small_03.jpeg" alt="Studio Small 03">
+                      <p>Studio Small 03</p>
+                    </div>    
+                    <div class="swiper-slide hdri-option" data-hdri="../Model/HDR/studio_small_09_4k.hdr">
+                      <img src="../Model/HDR/images/studio_small_09.jpeg" alt="Studio Small 09">
+                      <p>Studio Small 09</p>
+                    </div>  
+                    <div class="swiper-slide hdri-option" data-hdri="../Model/HDR/kloofendal_48d_partly_cloudy_4k.hdr">
+                      <img src="../Model/HDR/images/kloofendal_48d_partly_cloudy.jpeg" alt="Kloofendal 48d Partly Cloudy">
+                      <p>Kloofendal 48d Partly Cloudy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="details" id="CollectionD">
+        <div class="IC">
+          <span class="titleGallery">
+            <div class="Collection-Text">COLLECTION:</div>
+            <p class="current-img"></p>
+            <span class="num"> OF </span>
+            <span class="numPhone"> / </span>
+            <p class="total-img"></p>
+          </span>
+        </div>
+        <div class="Detailsicon">
+          <span class="ClosePreviewicon fas fa-times closepreview"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow"></div>
+
+  <div id="guideSystem" class="">
+    <div class="guide-model" id="guideModel">
+      <div class="model-header">
+        <h2>Guide Instructions</h2>
+        <span class="fa-solid fa-times closeGuide"></span>
+      </div>
+
+      <div class="model-body">
+        <div class="guide-left">
+          <div class="GuideLeftContainer">
+            <h2>Quick Start</h2>
+            <div class="UsageGuide">
+              <div class="control-item">
+                <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                <h4>Orbit View</h4>
+                <p>Right Click + Drag</p>
+              </div>
+              <div class="control-item">
+                <i class="fa-solid fa-rotate"></i>
+                <h4>Rotate Model</h4>
+                <p>Left Click + Drag</p>
+              </div>
+              <div class="control-item">
+                <i class="fa-solid fa-maximize"></i>
+                <h4>Reset View</h4>
+                <p>F Key</p>
+              </div>
+              <div class="control-item">
+                <i class="fa-solid fa-gears"></i>
+                <h4>Settings Panel</h4>
+                <p>G Key</p>
+              </div>
+            </div>
+            
+            <h2>Renderer Options</h2>
+            <div class="wireguide">
+              <div class="control-item">
+                <h4>Original Textures</h4>
+                <p>Full material rendering with HDRI lighting, including, Metalness and Reflections</p>
+              </div>
+              <div class="control-item">
+                <h4>Ambient Occlusion</h4>
+                <p>Highlighting contact shadows and surface depth without colors or textures</p>
+              </div>
+              <div class="control-item">
+                <h4>Wireframe</h4>
+                <p>Displays the underlying structure of the model, showing edges and topology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-right">
+          <h2>Exclusive Modes</h2>
+          <div class="feature-item">
+            <span class="feature-number">1</span>
+            <div class="feature-text">
+              <h4>HDRI Lighting</h4>
+              <p>8 environment presets – lightbulb icon</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-number">2</span>
+            <div class="feature-text">
+              <h4>Performance Modes</h4>
+              <p>Auto‑quality adjusts by FPS</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-number">3</span>
+            <div class="feature-text">
+              <h4>Safety Systems</h4>
+              <p>Auto‑cleanup after 10 min idle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loadingScreen" style="display: none;">
+    <div id="spinner"></div>
+    <div class="Loading-Details">
+      <div class="loading-text">Loading Model...</div>
+      <div class="loading-container">
+        <div class="loading-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"
+      }
+    }
+  </script>
+
+  <script>
+    function setVH() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setVH();
+    setTimeout(setVH, 100);
+    setTimeout(setVH, 300);
+    setTimeout(setVH, 1000);
+
+    window.addEventListener('resize', () => {
+      setVH();
+      setTimeout(setVH, 100);
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        freeMode: true,
+        navigation: false,
+        pagination: false,
+        slidesPerView: 'auto',
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.1/dist/es-module-shims.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script src="https://cdn.rawgit.com/video-dev/hls.js/18bb552/dist/hls.min.js"></script>
+  <script src="https://unpkg.com/plyr@3"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script type="module" src="../Script/VolareLoad.js"></script>
+  <script type="module" src="../Script/VolareStyle.js"></script>
+  <script type="module" src="../Script/GalleryVFX.js"></script>
+  <script src="../Script/Navbar.js"></script>
+  <script src="../Script/inputrange.js"></script>
+  <script src="../Script/LoadingScreen.js"></script>
+</body>
+</html>
